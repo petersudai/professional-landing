@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand: #b45309;
+    --color-brand-light: #fef3c7;
+    --color-dark: #0f172a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-white text-slate-900 font-sans overflow-x-hidden;
+  }
+
+  /* Smooth scrolling offset for sticky nav */
+  [id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer components {
+  .ease-spring {
+    transition-timing-function: cubic-bezier(0.21, 0.47, 0.32, 0.98);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Remove default select arrow on some browsers, keep on others */
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    padding-right: 38px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+@layer utilities {
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

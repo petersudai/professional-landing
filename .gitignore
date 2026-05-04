@@ -1,0 +1,74 @@
+# ──────────────────────────────────────────────
+# SECURITY — never commit these
+# ──────────────────────────────────────────────
+.env
+.env.*
+# Allow the safe example template — no real secrets in this file
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+secrets/
+.secret
+
+# ──────────────────────────────────────────────
+# DEPENDENCIES
+# ──────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ──────────────────────────────────────────────
+# NEXT.JS BUILD OUTPUT
+# ──────────────────────────────────────────────
+.next/
+out/
+build/
+dist/
+
+# ──────────────────────────────────────────────
+# CACHE & LOGS
+# ──────────────────────────────────────────────
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+logs/
+
+# ──────────────────────────────────────────────
+# TESTING & COVERAGE
+# ──────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ──────────────────────────────────────────────
+# OS & EDITOR JUNK
+# ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+
+# ──────────────────────────────────────────────
+# DEPLOYMENT PLATFORM FILES
+# ──────────────────────────────────────────────
+.vercel/
+.netlify/
+
+# ──────────────────────────────────────────────
+# TYPESCRIPT
+# ──────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
