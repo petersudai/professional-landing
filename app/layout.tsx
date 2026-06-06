@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     description: config.meta.description,
     url: config.meta.url,
     siteName: config.meta.name,
-    images: [{ url: config.meta.ogImage }],
+    // og:image is generated automatically by app/opengraph-image.tsx
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: config.meta.title,
     description: config.meta.description,
-    images: [config.meta.ogImage],
+    // twitter:image falls back to opengraph-image.tsx automatically
   },
 }
 
