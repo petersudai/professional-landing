@@ -1,321 +1,242 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PROFESSIONAL LANDING PAGE — CONTENT CONFIGURATION
+// All the words, numbers and images on the page live in this file.
+// Change it to retarget the template to another professional.
 //
-// This is the ONLY file you need to change to adapt this template to any
-// profession (doctor, lawyer, engineer, consultant, executive coach, etc.)
-//
-// Structure and styles are defined in components — they never change.
-// Content and copy live here — this is where your customization lives.
-// ─────────────────────────────────────────────────────────────────────────────
+// Developer note: the name, businesses, quotes and figures below are placeholders.
+// Replace them before publishing, and only publish figures you can trace to a real job.
+// Hero photo: Nguyễn Hiệp on Unsplash (free licence, no attribution required).
 
 export const config = {
-
-  // ── META / SEO ───────────────────────────────────────────────────────────
   meta: {
     name: 'Sarah Mitchell',
-    title: 'Strategic Business Consultant | Revenue Growth Specialist',
+    title: 'Sarah Mitchell | Operations consultant for wholesale and distribution businesses',
     description:
-      'I help mid-market CEOs unlock sustainable revenue growth through data-driven operational strategy. Book a free 30-minute strategy call.',
-    url: 'https://yourdomain.com',
-    ogImage: '/og-image.jpg',
+      'Sarah Mitchell helps owners of wholesale and distribution businesses find where orders slow down and fix it with their own team. Book a free 30-minute call.',
+    // Set NEXT_PUBLIC_SITE_URL in production so link previews use absolute URLs.
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   },
 
-  // ── NAVIGATION ───────────────────────────────────────────────────────────
   nav: {
-    logo: 'Sarah Mitchell',
-    logoSuffix: 'Consulting',
+    wordmark: 'Sarah Mitchell',
+    descriptor: 'Operations consulting',
     links: [
-      { label: 'About', href: '#about' },
+      { label: 'The work', href: '#results' },
       { label: 'Services', href: '#services' },
-      { label: 'Results', href: '#results' },
-      { label: 'Process', href: '#process' },
-      { label: 'FAQ', href: '#faq' },
+      { label: 'How it runs', href: '#process' },
+      { label: 'Questions', href: '#faq' },
     ],
-    cta: { label: 'Book a Free Call', href: '#contact' },
+    cta: { label: 'Book a call', href: '#contact' },
   },
 
-  // ── HERO ─────────────────────────────────────────────────────────────────
   hero: {
-    eyebrow: 'Strategic Business Consultant',
-    // Use \n to force a line break in the headline
-    headline: 'Turn Operational Chaos Into\nPredictable Revenue Growth',
-    subheadline:
-      'I help mid-market CEOs and founders identify hidden growth levers, eliminate operational drag, and build the systems that scale — without burning out their teams.',
-    primaryCta: { label: 'Book Your Free Strategy Call', href: '#contact' },
-    secondaryCta: { label: 'See Client Results', href: '#results' },
-    socialProof: {
-      stat1: { value: '40+', label: 'Companies Transformed' },
-      stat2: { value: '$200M+', label: 'Revenue Unlocked' },
-      stat3: { value: '94%', label: 'Client Retention Rate' },
+    headline: "Late orders, wrong stock counts, and you're the only one who knows why.",
+    sub: "I'm Sarah Mitchell. I find where your orders slow down and fix it with your own team. Then I write down how, so it keeps working when you're not there.",
+    cta: { label: 'Book a 30-minute call', href: '#contact' },
+    secondary: { label: 'See three past jobs', href: '#results' },
+    note: 'Taking two new clients this quarter.',
+    image: {
+      src: '/images/hero.jpg',
+      width: 1600,
+      height: 2400,
+      alt: 'A woman in a striped top working through papers at a table with a pen, seen from behind. Black and white photograph.',
     },
-    // Creates mild urgency without being spammy
-    availability: 'Currently accepting 3 new clients for Q3 2026',
   },
 
-  // ── TRUST BAR ────────────────────────────────────────────────────────────
-  // Logos of companies client worked at, publications featured in, or
-  // professional body memberships. Shown immediately below the hero.
-  trustBar: {
-    eyebrow: 'Trusted by leaders at',
-    logos: [
-      { name: 'McKinsey & Co.', abbr: 'MCK' },
-      { name: 'Goldman Sachs', abbr: 'GS' },
-      { name: 'Deloitte', abbr: 'DLT' },
-      { name: 'Harvard Business Review', abbr: 'HBR' },
-      { name: 'Forbes', abbr: 'FRB' },
-    ],
-    credentials: [
-      'MBA, Harvard Business School',
-      'Certified Management Consultant',
-      '15+ Years Experience',
-      'Member, Forbes Business Council',
+  need: {
+    heading: 'How it usually shows up',
+    items: [
+      'A customer rings to ask where their order is, and nobody can answer without walking the floor.',
+      'The system says you have 40 of something. The shelf has 12.',
+      'Dispatch runs well until one particular supervisor is on leave.',
+      "You've bought software for this twice. Both times it got used for a month.",
     ],
   },
 
-  // ── ABOUT ────────────────────────────────────────────────────────────────
   about: {
-    eyebrow: 'About Sarah',
-    headline: 'Built for the problems\nthat keep you up at 2AM',
-    // Each string is a paragraph
+    heading: "Who you'd be working with",
     body: [
-      'I spent a decade inside three Fortune 500 companies watching brilliant leaders hit invisible ceilings — not from lack of talent, but from systems that couldn\'t scale with their ambition.',
-      'In 2012, I founded my practice specifically to solve this problem. Today, I work exclusively with mid-market CEOs and founders who are ready to build companies that grow without constantly depending on them.',
-      'My approach combines hard operational data with the strategic clarity that only comes from 15 years of pattern recognition across 40+ engagements.',
+      'I spent eleven years in dispatch and then operations at a regional building-materials distributor. A late delivery there meant a crew standing around on a site, so I learned to care more about the order that left the yard an hour late than about the monthly report.',
+      "I started consulting in 2019. I take on about three businesses at a time, all of them owner-run. You deal with me from the first call to the last day.",
     ],
-    credentials: [
-      { label: 'MBA', sublabel: 'Harvard Business School' },
-      { label: 'CMC', sublabel: 'Certified Management Consultant' },
-      { label: '15+', sublabel: 'Years in Strategy' },
-      { label: '40+', sublabel: 'Successful Engagements' },
+    facts: [
+      { term: 'Before consulting', detail: 'Eleven years in dispatch and operations at a regional distributor' },
+      { term: 'Who I work with', detail: 'Owner-run wholesale and distribution businesses, 20 to 150 people' },
+      { term: 'At any one time', detail: 'Three clients, at most' },
+      { term: 'Where', detail: 'On site for the diagnostic, then on site or on video each week' },
     ],
-    // Replace with your actual professional photo
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=700&fit=crop&crop=face',
-    imageAlt: 'Sarah Mitchell, Strategic Business Consultant',
   },
 
-  // ── SERVICES ─────────────────────────────────────────────────────────────
   services: {
-    eyebrow: 'How I Help',
-    headline: 'Three ways to work together',
-    subheadline:
-      'Each engagement is tailored to your specific situation — no cookie-cutter frameworks, no junior consultants on your account.',
+    heading: 'What it costs and what you get',
+    sub: 'Prices are in US dollars and agreed in writing before we start.',
     items: [
       {
-        // Use lucide-react icon names: https://lucide.dev/icons
-        icon: 'Target',
-        title: 'Revenue Growth Strategy',
+        tag: 'Start here',
+        title: 'Diagnostic',
+        price: '$3,800',
+        length: '2 weeks',
         description:
-          'A complete diagnostic of your growth model — identifying what\'s working, what\'s leaking, and where your highest-leverage opportunities are hiding.',
-        outcomes: [
-          'Clear 90-day growth roadmap',
-          'Identified revenue leaks (avg. 23% of revenue)',
-          'Prioritized initiative stack',
-          'Implementation support included',
+          "I spend a week watching orders move through your building and a week in your numbers. You get a written report that names the three slowest steps, what each one costs you every month, and what I'd change first.",
+        includes: [
+          'Two days on site, including an early shift',
+          'Conversations with your supervisors and drivers',
+          'A written report and a one-hour walkthrough',
+          'The fee is credited if you go on to the 90-day work within 30 days',
         ],
-        investment: 'Starting at $8,500',
-        duration: '4–6 weeks',
-        badge: null,
+        cta: 'Start with a call',
       },
       {
-        icon: 'Zap',
-        title: 'Operational Excellence Program',
+        tag: '',
+        title: '90-day improvement',
+        price: '$9,500',
+        length: '13 weeks',
         description:
-          'A hands-on 90-day engagement to rebuild your core operational systems, eliminate bottlenecks, and give your team the clarity to execute without you.',
-        outcomes: [
-          'Full operational audit & redesign',
-          'Team accountability systems',
-          'KPI dashboards and reporting',
-          'Monthly strategy sessions',
+          'We fix the slowest step first, then the next one. I work with your team every week and write each change onto a one-page procedure they can follow without me.',
+        includes: [
+          'A half day a week, on site or on video',
+          'One procedure sheet for each change',
+          'Before and after figures every two weeks',
+          'The diagnostic fee credited',
         ],
-        investment: 'Starting at $18,000',
-        duration: '90 days',
-        badge: 'Most Popular',
+        cta: 'Ask about this',
       },
       {
-        icon: 'Users',
-        title: 'Fractional CSO',
+        tag: '',
+        title: 'Standing advisor',
+        price: '$3,200 a month',
+        length: '3 month minimum',
         description:
-          'On-demand strategic leadership — your part-time Chief Strategy Officer. I sit in your leadership meetings, challenge assumptions, and keep strategy connected to execution.',
-        outcomes: [
-          'Weekly strategic advisory sessions',
-          'Board-level reporting & prep',
-          'Team coaching & mentorship',
-          'Ongoing market analysis',
+          'One day a month with you and your managers. We go through the numbers, choose the next fix, and you can reach me by phone between visits.',
+        includes: [
+          'One day a month on site',
+          'A one-page scorecard before each visit',
+          'Phone and message access on weekdays',
         ],
-        investment: 'Starting at $6,500/mo',
-        duration: '6-month minimum',
-        badge: null,
+        cta: 'Ask about this',
       },
     ],
   },
 
-  // ── RESULTS ──────────────────────────────────────────────────────────────
   results: {
-    eyebrow: 'Client Results',
-    headline: 'Outcomes, not promises',
-    stats: [
-      { value: '$200M+', label: 'Total client revenue generated' },
-      { value: '3.2×', label: 'Average ROI on engagement fee' },
-      { value: '6 wks', label: 'Average time to first visible result' },
-    ],
-    caseStudies: [
+    heading: 'Three jobs, written up on one sheet each',
+    sub: 'This is the page I hand the owner at the end. The same measures at the start and at the finish.',
+    jobs: [
       {
-        company: 'TechScale Inc.',
-        industry: 'B2B SaaS',
-        challenge:
-          'Revenue had plateaued at $8M ARR for 18 months despite heavy sales investment. The founder was working 70-hour weeks and still losing deals.',
-        result:
-          'Identified a fundamental positioning mismatch. Repositioned the ICP, rebuilt the sales motion, and within 6 months they crossed $14M ARR.',
-        metric: '+$6M ARR',
-        metricLabel: 'in 6 months',
+        ref: 'No. 014',
+        client: 'Hardware wholesaler, 64 staff',
+        problem: 'Orders sat in a queue because one person released them to the floor.',
+        duration: 'Closed after 13 weeks',
+        measures: [
+          { label: 'Order to dispatch', before: '2.9 days', after: '1.1 days' },
+          { label: 'Stockouts a month', before: '41', after: '12' },
+          { label: 'Orders shipped wrong', before: '3.4%', after: '0.8%' },
+        ],
+        quote: 'I stopped getting calls from customers asking where their goods were. That alone paid for it.',
+        by: 'Joseph T., owner',
       },
       {
-        company: 'MedGroup Holdings',
-        industry: 'Healthcare Services',
-        challenge:
-          'Rapid acquisition growth created operational chaos — 3 different EHR systems, unclear accountability, and declining EBITDA margins despite revenue growth.',
-        result:
-          'Consolidated operations, installed a unified reporting layer, and built a cross-site management team. EBITDA improved by 11 points in 12 months.',
-        metric: '+11pts',
-        metricLabel: 'EBITDA improvement',
-      },
-    ],
-  },
-
-  // ── TESTIMONIALS ─────────────────────────────────────────────────────────
-  testimonials: {
-    eyebrow: 'What Clients Say',
-    headline: 'Results you can measure.\nWords you can trust.',
-    items: [
-      {
-        quote:
-          'Sarah didn\'t just hand us a report — she fundamentally changed how we think about our business. Six months later, we\'ve grown 40% and I\'m working 20 hours less per week.',
-        name: 'James Thornton',
-        title: 'CEO',
-        company: 'TechScale Inc.',
-        result: '40% revenue growth in 6 months',
-        avatar: 'https://ui-avatars.com/api/?name=James+Thornton&background=0F172A&color=fff&size=128',
+        ref: 'No. 019',
+        client: 'Commercial printer, 38 staff',
+        problem: 'Delivery dates were promised from memory, and the presses waited for plates and paper.',
+        duration: 'Closed after 13 weeks',
+        measures: [
+          { label: 'Jobs delivered late', before: '27%', after: '6%' },
+          { label: 'Press idle, hours a week', before: '9', after: '3' },
+          { label: 'Time to answer a quote', before: '3 days', after: 'Same day' },
+        ],
+        quote: 'The delivery date now comes off a board everyone can see. Before, it came out of my head.',
+        by: 'Amina R., managing director',
       },
       {
-        quote:
-          'The ROI was measurable within 8 weeks. We identified $1.2M in operational savings we didn\'t know we were leaking. Best investment we\'ve made in 5 years.',
-        name: 'Dr. Linda Park',
-        title: 'Managing Partner',
-        company: 'Park & Associates',
-        result: '$1.2M in recovered operational value',
-        avatar: 'https://ui-avatars.com/api/?name=Linda+Park&background=0F172A&color=fff&size=128',
-      },
-      {
-        quote:
-          'I was skeptical of consultants before this. Sarah\'s approach is different — she gets in the weeds with you, and the accountability is real. We\'ve scaled 3× in 14 months.',
-        name: 'Marcus Williams',
-        title: 'Founder & CEO',
-        company: 'Meridian Capital Group',
-        result: '3× revenue growth in 14 months',
-        avatar: 'https://ui-avatars.com/api/?name=Marcus+Williams&background=0F172A&color=fff&size=128',
+        ref: 'No. 023',
+        client: 'Food distributor, 120 staff',
+        problem: 'Trucks left the loading bay late and stock counts drifted from what was on the shelves.',
+        duration: 'Closed after 13 weeks',
+        measures: [
+          { label: 'Spoiled stock', before: '5.1%', after: '2.3%' },
+          { label: 'Truck loading time', before: '55 min', after: '30 min' },
+          { label: 'Stock count accuracy', before: '86%', after: '97%' },
+        ],
+        quote: "Sarah stood on our loading bay at 4am for a week before she said anything. That's why I listened.",
+        by: 'Daniel O., owner',
       },
     ],
   },
 
-  // ── PROCESS ──────────────────────────────────────────────────────────────
   process: {
-    eyebrow: 'How It Works',
-    headline: 'From first call to\nmeasurable results',
-    subheadline:
-      'A structured process that respects your time and delivers clarity at every stage.',
+    heading: 'How it runs',
     steps: [
       {
-        number: '01',
-        title: 'Strategy Call',
-        description:
-          'A focused 30-minute call to understand your situation, goals, and whether we\'re a fit. No sales pressure — just an honest conversation.',
-        duration: '30 min',
+        title: 'A 30-minute call',
+        when: 'First',
+        text: "You tell me what's slow. I'll say whether I think I can help, and if I can't, who might.",
       },
       {
-        number: '02',
-        title: 'Deep Diagnostic',
-        description:
-          'I audit your business end-to-end — financials, operations, team, market position — to identify exactly where the leverage is.',
-        duration: 'Week 1–2',
+        title: 'The diagnostic',
+        when: 'Weeks 1 and 2',
+        text: 'A week watching, a week in your numbers. You get the written report.',
       },
       {
-        number: '03',
-        title: 'Strategic Roadmap',
-        description:
-          'You receive a clear, prioritized action plan with the specific initiatives that will drive the biggest results in the shortest time.',
-        duration: 'Week 3',
+        title: 'The plan',
+        when: 'Week 3',
+        text: 'A one-page plan in priority order. You choose what we start with.',
       },
       {
-        number: '04',
-        title: 'Implementation & Results',
-        description:
-          'We execute together. I\'m in the room as your team implements, adjusting in real time as we learn what works.',
-        duration: 'Ongoing',
+        title: 'The work',
+        when: 'Weeks 4 to 16',
+        text: 'We fix one thing at a time and write each fix down. You see the figures every two weeks.',
       },
     ],
   },
 
-  // ── FAQ ──────────────────────────────────────────────────────────────────
   faq: {
-    eyebrow: 'Common Questions',
-    headline: 'Everything you need to know\nbefore booking a call',
+    heading: 'Questions owners ask me first',
     items: [
       {
-        question: 'Is this right for my business?',
+        question: 'Is my business too small?',
         answer:
-          'My engagements are best suited for companies between $2M and $50M in annual revenue experiencing a growth plateau, operational friction, or strategic uncertainty. If you\'re outside this range, I\'ll still take the call — and if I\'m not the right fit, I\'ll point you toward someone who is.',
+          "I've worked with businesses from about 20 to 150 people. Below 20, the owner can usually still see everything, and a diagnostic is more than you need.",
       },
       {
-        question: 'How long before I see results?',
+        question: 'What happens if I stop after the diagnostic?',
         answer:
-          'Most clients see the first measurable impact within 6–8 weeks — typically a revenue insight, a cost reduction, or an operational improvement that pays for itself. The full transformation typically takes 90–180 days depending on scope.',
+          'You keep the report and owe nothing more. Some owners take the report and run it themselves, and that is a fine outcome.',
       },
       {
-        question: 'What does the investment include?',
+        question: 'Will my staff think I am checking up on them?',
         answer:
-          'Every engagement includes direct access to me (not a junior associate), documented deliverables, and accountability check-ins. Pricing is transparent — starting prices are listed in the services section, and the final scope is agreed before we begin. No surprise fees.',
+          "It comes up every time. On day one I tell the team I'm studying the process, not grading people, and they see the findings before you do.",
       },
       {
-        question: 'How is this different from a traditional consulting firm?',
+        question: "We tried software and it didn't stick. Why would this?",
         answer:
-          'Traditional firms send junior analysts and spread partners across 20 accounts. With me, you get senior-level thinking, direct access, and an advisor genuinely invested in your outcome — not a billable-hour quota.',
+          "Usually the process was never written down, so the software had nothing to follow. I start with the process, and software comes later if it's needed at all.",
       },
       {
-        question: 'What if the engagement doesn\'t deliver?',
+        question: 'How much of my time do you need?',
         answer:
-          'I use a milestone-based structure. If we reach the first milestone and you don\'t feel the engagement is delivering value, we have an honest conversation — including a full or partial refund if the work hasn\'t met the agreed standard. I\'ve never had to do this, but the policy exists because I stand behind my work.',
+          'About two hours a week during the diagnostic and one hour a week after that, plus time with your supervisors.',
+      },
+      {
+        question: 'Do you come to us?',
+        answer:
+          'Yes for the diagnostic, which includes two days on your site and an early shift. After that you can choose site visits or video for the weekly half day.',
       },
     ],
   },
 
-  // ── CONTACT / BOOKING ────────────────────────────────────────────────────
   contact: {
-    eyebrow: "Let's Talk",
-    headline: 'Ready to scale without\nburning out your team?',
-    subheadline:
-      'Book a free 30-minute strategy call. We\'ll talk about your situation, your goals, and whether I can help. No pitch, no pressure.',
-    availability: 'Next available slot: June 15, 2026',
-    responseTime: 'I respond to every inquiry within 24 hours',
-    // Optional: replace the form with a Calendly embed URL
-    // calendlyUrl: 'https://calendly.com/yourusername/strategy-call',
-    revenueOptions: [
-      'Under $1M',
-      '$1M – $5M',
-      '$5M – $20M',
-      '$20M – $50M',
-      '$50M+',
-    ],
+    heading: "Tell me what's slow.",
+    sub: "Fill in the form and I'll reply within one working day with times for a call. The call is free and takes 30 minutes.",
+    when: 'Calls are on Tuesdays and Thursdays.',
+    sizes: ['Under 20 people', '20 to 50 people', '50 to 150 people', 'Over 150 people'],
+    placeholder: "For example: orders go out late on Mondays and I don't know why.",
   },
 
-  // ── FOOTER ───────────────────────────────────────────────────────────────
   footer: {
-    tagline: 'Strategic clarity for leaders serious about growth.',
-    links: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile' },
-    ],
-    copyright: '© 2026 Sarah Mitchell Consulting. All rights reserved.',
+    // Optional links, for example:
+    // { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-profile' }
+    links: [] as { label: string; href: string }[],
+    copyright: '© 2026 Sarah Mitchell. All rights reserved.',
   },
 }
 

@@ -3,46 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-brand: #b45309;
-    --color-brand-light: #fef3c7;
-    --color-dark: #0f172a;
-  }
-
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
   body {
-    @apply bg-white text-slate-900 font-sans overflow-x-hidden;
+    @apply bg-paper font-sans text-[1.0625rem] leading-relaxed text-ink;
   }
 
-  /* Smooth scrolling offset for sticky nav */
   [id] {
-    scroll-margin-top: 80px;
-  }
-}
-
-@layer components {
-  .ease-spring {
-    transition-timing-function: cubic-bezier(0.21, 0.47, 0.32, 0.98);
+    scroll-margin-top: 72px;
   }
 
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  /* Remove default select arrow on some browsers, keep on others */
   select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234A4E48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center;
     background-size: 14px;
@@ -50,25 +25,42 @@
     -webkit-appearance: none;
     appearance: none;
   }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
-@layer utilities {
-  .animation-delay-150 {
-    animation-delay: 150ms;
-  }
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-  .animation-delay-500 {
-    animation-delay: 500ms;
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1160px] px-5 sm:px-8;
   }
 
-  /* Hide scrollbar but allow scrolling */
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-md bg-ledger px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-ledger-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ledger;
   }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+
+  .link {
+    @apply inline-flex min-h-[44px] items-center font-semibold text-ledger underline underline-offset-4 decoration-ledger/40 transition-colors hover:decoration-ledger focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ledger;
+  }
+}
+
+/* One quiet motion: the hero fades in once on load. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
