@@ -5,15 +5,20 @@ export function Hero() {
   const { hero } = config
 
   return (
-    <section id="top" className="border-b border-rule">
-      <div className="container-page fade-in grid gap-10 pb-14 pt-10 md:pt-14 lg:grid-cols-12 lg:items-center lg:gap-14 lg:pb-20 lg:pt-16">
+    // On laptops the hero fills the window under the 64px header and centres its content.
+    // Type size and spacing are tied to the window height (svh), so a short screen
+    // compresses the hero instead of pushing the buttons below the fold.
+    <section id="top" className="border-b border-rule lg:flex lg:min-h-[calc(100svh-4rem)] lg:items-center">
+      <div className="container-page grid gap-[clamp(1.5rem,4svh,2.5rem)] pb-[clamp(2rem,6svh,4rem)] pt-[clamp(1.5rem,5svh,3.5rem)] lg:grid-cols-12 lg:items-center lg:gap-14">
         <div className="lg:col-span-7">
-          <h1 className="font-display text-[2.375rem] font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="font-display text-[clamp(2.25rem,2.2vw+3.2svh,3.5rem)] font-semibold leading-[1.08] tracking-tight">
             {hero.headline}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-graphite sm:text-xl">{hero.sub}</p>
+          <p className="mt-[clamp(1rem,2.4svh,1.5rem)] max-w-xl text-lg leading-relaxed text-graphite sm:text-xl">
+            {hero.sub}
+          </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">
+          <div className="mt-[clamp(1.25rem,3.4svh,2rem)] flex flex-wrap items-center gap-x-7 gap-y-1">
             <a href={hero.cta.href} className="btn">
               {hero.cta.label}
             </a>
@@ -21,11 +26,11 @@ export function Hero() {
               {hero.secondary.label}
             </a>
           </div>
-          <p className="mt-5 text-[0.9375rem] text-graphite">{hero.note}</p>
+          <p className="mt-[clamp(0.75rem,2svh,1.25rem)] text-[0.9375rem] text-graphite">{hero.note}</p>
         </div>
 
         <figure className="lg:col-span-5">
-          <div className="aspect-[4/5] overflow-hidden bg-rule">
+          <div className="aspect-[4/5] overflow-hidden bg-rule lg:max-h-[calc(100svh-10rem)]">
             <Image
               src={hero.image.src}
               alt={hero.image.alt}

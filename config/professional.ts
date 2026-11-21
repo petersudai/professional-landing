@@ -32,7 +32,7 @@ export const config = {
     sub: "I'm Sarah Mitchell. I find where your orders slow down and fix it with your own team. Then I write down how, so it keeps working when you're not there.",
     cta: { label: 'Book a 30-minute call', href: '#contact' },
     secondary: { label: 'See three past jobs', href: '#results' },
-    note: 'Taking two new clients this quarter.',
+    note: 'Eleven years in dispatch and operations. Two places open this quarter.',
     image: {
       src: '/images/hero.jpg',
       width: 1600,
